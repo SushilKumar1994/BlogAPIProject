@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import django_heroku 
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,9 +26,11 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'o4yux&$wp#xx5kufixsx50)6lvk5a6_f-!+po7d%7q30s@byz8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-#
+if len(sys.argv>=2 sys.argv[1]=="runserver")
+    DEBUG = True
+else:
+    DEBUG = False     
 
 ALLOWED_HOSTS = ['*']
 
