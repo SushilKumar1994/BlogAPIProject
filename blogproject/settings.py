@@ -27,7 +27,7 @@ SECRET_KEY = 'o4yux&$wp#xx5kufixsx50)6lvk5a6_f-!+po7d%7q30s@byz8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-if len(sys.argv>=2 sys.argv[1]=="runserver")
+if (len(sys.argv)>=2 sys.argv[1]=="runserver"):
     DEBUG = True
 else:
     DEBUG = False     
